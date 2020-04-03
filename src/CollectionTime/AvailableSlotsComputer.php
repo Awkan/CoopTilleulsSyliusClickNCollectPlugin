@@ -29,7 +29,10 @@ use Recurr\Transformer\Constraint\BetweenConstraint;
  */
 final class AvailableSlotsComputer implements AvailableSlotsComputerInterface
 {
-    private CollectionTimeRepositoryInterface $collectionTimeRepository;
+    /**
+     * @var CollectionTimeRepositoryInterface
+     */
+    private $collectionTimeRepository;
 
     public function __construct(CollectionTimeRepositoryInterface $collectionTimeRepository)
     {

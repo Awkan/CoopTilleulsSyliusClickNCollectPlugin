@@ -24,8 +24,15 @@ use Doctrine\ORM\EntityManagerInterface;
  */
 final class CollectionTimeRepository implements CollectionTimeRepositoryInterface
 {
-    private EntityManagerInterface $entityManager;
-    private string $shipmentClass;
+    /**
+     * @var EntityManagerInterface
+     */
+    private $entityManager;
+
+    /**
+     * @var string
+     */
+    private $shipmentClass;
 
     public function __construct(EntityManagerInterface $entityManager, string $shipmentClass)
     {

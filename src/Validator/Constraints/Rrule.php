@@ -24,5 +24,8 @@ use Symfony\Component\Validator\Constraint;
  */
 final class Rrule extends Constraint
 {
-    public string $message = 'The string "{{ value }}" is not a valid iCalendar recurrence rule (RFC 5545).';
+    /**
+     * @var string
+     */
+    public $message = 'The string "{{ value }}" is not a valid iCalendar recurrence rule (RFC 5545).';
 }

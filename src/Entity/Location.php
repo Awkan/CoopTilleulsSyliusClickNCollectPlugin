@@ -31,22 +31,70 @@ class Location implements LocationInterface
 
     /** @var mixed */
     protected $id;
-    protected ?string $code = null;
-    protected string $name = '';
-    protected ?string $street = null;
-    protected ?string $city = null;
-    protected ?string $postcode = null;
-    protected ?string $countryCode = null;
-    protected ?string $provinceCode = null;
-    protected ?string $provinceName = null;
-    protected string $rrule = 'FREQ=MINUTELY;INTERVAL=20;BYHOUR=9,10,11,12,13,14,15,16;BYDAY=MO,TU,WE,TH,FR;DTSTART=20200328T080000;DTEND=20200328T082000';
-    protected int $orderPreparationDelay = 0;
-    protected int $throughput = 1;
-    protected bool $generatePin = false;
+
+    /**
+     * @var string|null
+     */
+    protected $code = null;
+
+    /**
+     * @var string
+     */
+    protected $name = '';
+
+    /**
+     * @var string|null
+     */
+    protected $street = null;
+    
+    /**
+     * @var string|null
+     */
+    protected $city = null;
+    
+    /**
+     * @var string|null
+     */
+    protected $postcode = null;
+
+    /**
+     * @var string|null
+     */
+    protected $countryCode = null;
+
+    /**
+     * @var string|null
+     */
+    protected $provinceCode = null;
+
+    /**
+     * @var string|null
+     */
+    protected $provinceName = null;
+
+    /**
+     * @var string
+     */
+    protected $rrule = 'FREQ=MINUTELY;INTERVAL=20;BYHOUR=9,10,11,12,13,14,15,16;BYDAY=MO,TU,WE,TH,FR;DTSTART=20200328T080000;DTEND=20200328T082000';
+
+    /**
+     * @var int
+     */
+    protected $orderPreparationDelay = 0;
+    
+    /**
+     * @var int
+     */
+    protected $throughput = 1;
+
+    /**
+     * @var bool
+     */
+    protected $generatePin = false;
     /**
      * @var ShippingMethodInterface[]|Collection
      */
-    protected Collection $shippingMethods;
+    protected $shippingMethods;
 
     public function __construct()
     {

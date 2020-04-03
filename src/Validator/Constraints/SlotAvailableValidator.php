@@ -28,8 +28,15 @@ use Symfony\Component\Validator\Exception\UnexpectedValueException;
  */
 final class SlotAvailableValidator extends ConstraintValidator
 {
-    private EntityManagerInterface $entityManager;
-    private RecurrenceInstanceFinderInterface $recurrenceInstanceFinder;
+    /**
+     * @var EntityManagerInterface
+     */
+    private $entityManager;
+
+    /**
+     * @var RecurrenceInstanceFinderInterface
+     */
+    private $recurrenceInstanceFinder;
 
     public function __construct(EntityManagerInterface $entityManager, RecurrenceInstanceFinderInterface $recurrenceInstanceFinder)
     {

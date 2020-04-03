@@ -33,13 +33,40 @@ use Twig\Environment;
  */
 final class EditCollectionController
 {
-    private ObjectRepository $orderRepository;
-    private FormFactoryInterface $formFactory;
-    private ObjectManager $orderManager;
-    private RouterInterface $router;
-    private SessionInterface $session;
-    private TranslatorInterface $translator;
-    private Environment $twig;
+    /**
+     * @var ObjectRepository
+     */
+    private $orderRepository;
+
+    /**
+     * @var FormFactoryInterface
+     */
+    private  $formFactory;
+
+    /**
+     * @var ObjectManager
+     */
+    private  $orderManager;
+
+    /**
+     * @var RouterInterface
+     */
+    private  $router;
+
+    /**
+     * @var SessionInterface
+     */
+    private  $session;
+
+    /**
+     * @var TranslatorInterface
+     */
+    private  $translator;
+
+    /**
+     * @var Environment
+     */
+    private $twig;
 
     public function __construct(ObjectRepository $orderRepository, FormFactoryInterface $formFactory, ObjectManager $orderManager, RouterInterface $router, SessionInterface $session, TranslatorInterface $translator, Environment $twig)
     {

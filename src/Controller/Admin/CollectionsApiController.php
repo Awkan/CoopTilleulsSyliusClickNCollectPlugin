@@ -32,10 +32,25 @@ use Symfony\Component\Routing\RouterInterface;
  */
 final class CollectionsApiController
 {
-    private ObjectRepository $locationRepository;
-    private CollectionTimeRepositoryInterface $collectionTimeRepository;
-    private RecurrenceInstanceFinderInterface $recurrenceInstanceFinder;
-    private RouterInterface $router;
+    /**
+     * @var ObjectRepository
+     */
+    private $locationRepository;
+
+    /**
+     * @var CollectionTimeRepositoryInterface
+     */
+    private $collectionTimeRepository;
+    
+    /**
+     * @var RecurrenceInstanceFinderInterface
+     */
+    private $recurrenceInstanceFinder;
+
+    /**
+     * @var RouterInterface
+     */
+    private $router;
 
     public function __construct(ObjectRepository $locationRepository, CollectionTimeRepositoryInterface $collectionTimeRepository, RecurrenceInstanceFinderInterface $recurrenceInstanceFinder, RouterInterface $router)
     {

@@ -23,7 +23,10 @@ use Recurr\Recurrence;
  */
 final class RecurrenceInstanceFinder implements RecurrenceInstanceFinderInterface
 {
-    private AvailableSlotsComputerInterface $computer;
+    /**
+     * @var AvailableSlotsComputerInterface
+     */
+    private $computer;
 
     public function __construct(AvailableSlotsComputerInterface $computer)
     {

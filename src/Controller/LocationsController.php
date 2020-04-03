@@ -26,8 +26,15 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  */
 final class LocationsController
 {
-    private ObjectRepository $repository;
-    private SerializerInterface $serializer;
+    /**
+     * @var ObjectRepository
+     */
+    private  $repository;
+
+    /**
+     * @var SerializerInterface
+     */
+    private $serializer;
 
     public function __construct(ObjectRepository $repository, SerializerInterface $serializer)
     {
